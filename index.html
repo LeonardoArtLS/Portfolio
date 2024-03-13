@@ -1,133 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="css/theme.css">
-    <title>Portfólio | Leonardo Arthur</title>
-  </head>
-  <body>
-    
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="themeDropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Temas
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="themeDropdownMenuButton">
-            <li><button class="dropdown-item" type="button" data-bs-theme-value="light">Light</button></li>
-            <li><button class="dropdown-item" type="button" data-bs-theme-value="dark">Dark</button></li>
-            <li><button class="dropdown-item" type="button" data-bs-theme-value="blue">Blue</button></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/twbs/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <title>Portfólio | Leonardo Arthur</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="dropdown dropup-center dropup bd-mode-toggle col-3 position-fixed bottom-0 end-0 mb-3 me-3">
+      <button class="btn dropdown-toggle d-flex align-items-center justify-content-end ms-auto"
+        id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+        <i class="bi bi-palette-fill me-1"></i>
+        <svg class="bi theme-icon-active d-none">
+          <use></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu p-1 overflow-y-auto" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme" data-bs-theme-value="light"
+            aria-pressed="false">
+            <i class="ms-auto bi bi-sun-fill"></i>
+            <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Light</p>
+            <svg class="bi ms-auto d-none">
+              <use></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme active" data-bs-theme-value="dark"
+            aria-pressed="false">
+            <i class="ms-auto bi bi-moon-stars-fill"></i>
+            <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Dark</p>
+            <svg class="bi ms-auto d-none">
+              <use></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme" data-bs-theme-value="mush"
+            aria-pressed="true">
+            <i class="ms-auto bi bi-cloudy-fill"></i>
+            <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Mush</p>
+            <svg class="bi ms-auto d-none">
+              <use></use>
+            </svg>
+          </button>
+        </li>
+        <!-- <i class="bi bi-eyeglasses"></i>, <i class="bi bi-file-image-fill"></i>, <i class="bi bi-fire"></i>, <i class="bi bi-gift-fill"></i>, <i class="bi bi-hurricane"></i>, <i class="bi bi-lightning-fill"></i>, <i class="bi bi-cloudy-fill"></i> -->
+      </ul>
     </div>
 
+    <nav class="navbar">
+
+      <ul class="nav ms-auto me-1">
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#0077B5'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+              class="bi bi-linkedin"></i></a></li>
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#DB4437'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+              class="bi bi-envelope-fill"></i></a></li>
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#181717'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+              class="bi bi-github"></i></a></li>
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#25D366'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+              class="bi bi-whatsapp"></i></a></li>
+      </ul>
+
+
+      </div>
+
+    </nav>
+  </header>
+
+  
 
 
 
 
-    <script>
-      /*!
-       * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
-       * Copyright 2011-2024 The Bootstrap Authors
-       * Licensed under the Creative Commons Attribution 3.0 Unported License.
-       */
+  <script>
 
-      (() => {
-        "use strict";
+    (() => {
+      "use strict";
 
-        const getStoredTheme = () => localStorage.getItem("theme");
-        const setStoredTheme = (theme) => localStorage.setItem("theme", theme);
+      const getStoredTheme = () => localStorage.getItem("theme");
+      const setStoredTheme = (theme) => localStorage.setItem("theme", theme);
 
-        const getPreferredTheme = () => {
-          const storedTheme = getStoredTheme();
-          if (storedTheme) {
-            return storedTheme;
-          }
+      const getPreferredTheme = () => {
+        const storedTheme = getStoredTheme();
+        if (storedTheme) {
+          return storedTheme;
+        }
 
-          return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-        };
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
 
-        const setTheme = (theme) => {
-          if (theme === "auto") {
-            document.documentElement.setAttribute(
-              "data-bs-theme",
-              window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light"
-            );
-          } else {
-            document.documentElement.setAttribute("data-bs-theme", theme);
-          }
-        };
-
-        setTheme(getPreferredTheme());
-
-        const showActiveTheme = (theme, focus = false) => {
-          const themeSwitcher = document.querySelector("#bd-theme");
-
-          if (!themeSwitcher) {
-            return;
-          }
-
-          const themeSwitcherText = document.querySelector("#bd-theme-text");
-          const activeThemeIcon = document.querySelector(
-            ".theme-icon-active use"
+      const setTheme = (theme) => {
+        if (theme === "auto") {
+          document.documentElement.setAttribute(
+            "data-bs-theme",
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
           );
-          const btnToActive = document.querySelector(
-            `[data-bs-theme-value="${theme}"]`
-          );
-          const svgOfActiveBtn = btnToActive
-            .querySelector("svg use")
-            .getAttribute("href");
+        } else {
+          document.documentElement.setAttribute("data-bs-theme", theme);
+        }
+      };
 
-          document
-            .querySelectorAll("[data-bs-theme-value]")
-            .forEach((element) => {
-              element.classList.remove("active");
-              element.setAttribute("aria-pressed", "false");
-            });
+      setTheme(getPreferredTheme());
 
-          btnToActive.classList.add("active");
-          btnToActive.setAttribute("aria-pressed", "true");
-          activeThemeIcon.setAttribute("href", svgOfActiveBtn);
-          const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
-          themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
+      const showActiveTheme = (theme, focus = false) => {
+        const themeSwitcher = document.querySelector("#bd-theme");
 
-          if (focus) {
-            themeSwitcher.focus();
-          }
-        };
+        if (!themeSwitcher) {
+          return;
+        }
 
-        window
-          .matchMedia("(prefers-color-scheme: dark)")
-          .addEventListener("change", () => {
-            const storedTheme = getStoredTheme();
-            if (storedTheme !== "light" && storedTheme !== "dark") {
-              setTheme(getPreferredTheme());
-            }
+        const themeSwitcherText = document.querySelector("#bd-theme-text");
+        const activeThemeIcon = document.querySelector(
+          ".theme-icon-active use"
+        );
+        const btnToActive = document.querySelector(
+          `[data-bs-theme-value="${theme}"]`
+        );
+        const svgOfActiveBtn = btnToActive
+          .querySelector("svg use")
+          .getAttribute("href");
+
+        document
+          .querySelectorAll("[data-bs-theme-value]")
+          .forEach((element) => {
+            element.classList.remove("active");
+            element.setAttribute("aria-pressed", "false");
           });
 
-        window.addEventListener("DOMContentLoaded", () => {
-          showActiveTheme(getPreferredTheme());
+        btnToActive.classList.add("active");
+        btnToActive.setAttribute("aria-pressed", "true");
+        activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
+        themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
 
-          document
-            .querySelectorAll("[data-bs-theme-value]")
-            .forEach((toggle) => {
-              toggle.addEventListener("click", () => {
-                const theme = toggle.getAttribute("data-bs-theme-value");
-                setStoredTheme(theme);
-                setTheme(theme);
-                showActiveTheme(theme, true);
-              });
-            });
+        if (focus) {
+          themeSwitcher.focus();
+        }
+      };
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", () => {
+          const storedTheme = getStoredTheme();
+          if (storedTheme !== "light" && storedTheme !== "dark") {
+            setTheme(getPreferredTheme());
+          }
         });
-      })();
-    </script>
 
-    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      window.addEventListener("DOMContentLoaded", () => {
+        showActiveTheme(getPreferredTheme());
+
+        document
+          .querySelectorAll("[data-bs-theme-value]")
+          .forEach((toggle) => {
+            toggle.addEventListener("click", () => {
+              const theme = toggle.getAttribute("data-bs-theme-value");
+              setStoredTheme(theme);
+              setTheme(theme);
+              showActiveTheme(theme, true);
+            });
+          });
+      });
+    })();
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+    /* ======= scroll section avtive link ======= */
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('header nav a');
+
+    window.onscroll = () => {
+      sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let heigth = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + heigth) {
+          navLinks.forEach(links => {
+            links.classList.remove('active');
+            document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+          });
+        };
+      });
+      /* ====== sticky navbar ======*/
+      let header = document.querySelector('header');
+
+      header.classList.toggle('sticky', window.scrollY > 100);
+
+      /* ====== remove toggle ivcon and navbar when click navbar link (scroll) ======*/
+
+      menuIcon.classList.remove('bx-x');
+      navbar.classList.remove('active');
+    };
+
+  </script>
+  <script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  
+</body>
+
 </html>
