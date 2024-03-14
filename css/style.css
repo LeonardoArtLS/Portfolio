@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  scrollbar-width: thin;
+  scrollbar-color: --bs-body-secondary --bs-body;
+}
+
 .border-dashed {
   --bs-border-style: dashed;
 }
@@ -9,4 +15,66 @@
   border: solid rgba(0, 0, 0, 0.15);
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.black-and-white {
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+.black-and-white:hover {
+  filter: grayscale(0%);
+}
+
+.profile-photo {
+  background-image: url("https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671142.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: clamp(17.5rem, 14.375rem + 15.625vi, 21.875rem);
+  height: clamp(17.5rem, 14.375rem + 15.625vi, 21.875rem);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+.profile-photo:hover {
+  background-image: url("https://avatars.githubusercontent.com/u/144188076?v=4");
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.custom-col {
+  max-width: 50rem;
+  padding: 2rem;
+}
+.custom-col h1 {
+  font-size: 5.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+@media (max-width: 500px) {
+  .custom-col h1 {
+    font-size: 4rem;
+  }
+}
+.custom-col p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Mulish", sans-serif;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .custom-col p {
+    margin-bottom: 5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

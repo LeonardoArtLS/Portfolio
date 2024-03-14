@@ -8,6 +8,7 @@
 $main: #000;
 $sub: #000;
 $background: #f9f9f9;
+$background-gradient: #FA9239;
 
 $custom-colors:(
     "main": $main,
@@ -62,10 +63,17 @@ $utilities: map-merge(
   }
 }
 
-@include color-mode(white) {
+@include color-mode(light) {
   .bg-background {
     color: $background;
     background-color: $background;
+  }
+  .bg-background-gradient{
+    background: linear-gradient(to right, 
+    #FA9239,
+    #FA9239,
+    #FA9239
+);
   }
 }
 @include color-mode(dark) {
@@ -73,11 +81,29 @@ $utilities: map-merge(
     color: #212529;
     background-color: #212529;
   }
+  .bg-background-gradient{
+    background: linear-gradient(to right, 
+    #ff0000 0%,     /* Vermelho */
+    #ff7f00 25%,    /* Laranja */
+    #ffff00 50%,    /* Amarelo */
+    #00ff00 75%,    /* Verde */
+    #0000ff 100%    /* Azul */
+);
+  }
 }
 @include color-mode(mush) {
   .bg-background {
     color: #fff8f3;
     background-color: #fff8f3;
+  }
+  .bg-background-gradient{
+    background: linear-gradient(to right, 
+    #ff0000 0%,     /* Vermelho */
+    #ff7f00 25%,    /* Laranja */
+    #ffff00 50%,    /* Amarelo */
+    #00ff00 75%,    /* Verde */
+    #0000ff 100%    /* Azul */
+);
   }
 }
 
