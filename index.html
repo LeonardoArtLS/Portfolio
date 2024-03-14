@@ -7,66 +7,82 @@
   <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="vendor/twbs/bootstrap-icons/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Portfólio | Leonardo Arthur</title>
 </head>
 
 <body>
 
+
+  <div class="dropdown dropup-center dropup bd-mode-toggle col-3 position-fixed bottom-0 end-0 mb-3 me-3">
+    <button class="btn dropdown-toggle d-flex align-items-center justify-content-end ms-auto" id="bd-theme"
+      type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <i class="bi bi-palette-fill me-1"></i>
+      <svg class="bi theme-icon-active d-none">
+        <use></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu p-1 overflow-y-auto" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme"
+          data-bs-theme-value="light" aria-pressed="false">
+          <i class="ms-auto bi bi-sun-fill"></i>
+          <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Light</p>
+          <svg class="bi ms-auto d-none">
+            <use></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme active"
+          data-bs-theme-value="dark" aria-pressed="false">
+          <i class="ms-auto bi bi-moon-stars-fill"></i>
+          <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Dark</p>
+          <svg class="bi ms-auto d-none">
+            <use></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme" data-bs-theme-value="mush"
+          aria-pressed="true">
+          <i class="ms-auto bi bi-cloudy-fill"></i>
+          <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Mush</p>
+          <svg class="bi ms-auto d-none">
+            <use></use>
+          </svg>
+        </button>
+      </li>
+      <!-- <i class="bi bi-eyeglasses"></i>, <i class="bi bi-file-image-fill"></i>, <i class="bi bi-fire"></i>, <i class="bi bi-gift-fill"></i>, <i class="bi bi-hurricane"></i>, <i class="bi bi-lightning-fill"></i>, <i class="bi bi-cloudy-fill"></i> -->
+    </ul>
+  </div>
   <header>
-    <div class="dropdown dropup-center dropup bd-mode-toggle col-3 position-fixed bottom-0 end-0 mb-3 me-3">
-      <button class="btn dropdown-toggle d-flex align-items-center justify-content-end ms-auto"
-        id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-        <i class="bi bi-palette-fill me-1"></i>
-        <svg class="bi theme-icon-active d-none">
-          <use></use>
-        </svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu p-1 overflow-y-auto" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme" data-bs-theme-value="light"
-            aria-pressed="false">
-            <i class="ms-auto bi bi-sun-fill"></i>
-            <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Light</p>
-            <svg class="bi ms-auto d-none">
-              <use></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme active" data-bs-theme-value="dark"
-            aria-pressed="false">
-            <i class="ms-auto bi bi-moon-stars-fill"></i>
-            <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Dark</p>
-            <svg class="bi ms-auto d-none">
-              <use></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center rounded-1 theme" data-bs-theme-value="mush"
-            aria-pressed="true">
-            <i class="ms-auto bi bi-cloudy-fill"></i>
-            <p class="me-auto my-auto d-flex justify-content-center align-items-center ms-2">Mush</p>
-            <svg class="bi ms-auto d-none">
-              <use></use>
-            </svg>
-          </button>
-        </li>
-        <!-- <i class="bi bi-eyeglasses"></i>, <i class="bi bi-file-image-fill"></i>, <i class="bi bi-fire"></i>, <i class="bi bi-gift-fill"></i>, <i class="bi bi-hurricane"></i>, <i class="bi bi-lightning-fill"></i>, <i class="bi bi-cloudy-fill"></i> -->
-      </ul>
-    </div>
+    <nav class="navbar px-2">
 
-    <nav class="navbar">
+      <h1 class="mx-auto mx-md-0 mx-3 h2 text-body-secondary"><span class="text-body">Leonardo</span>Art<span class="text-body">LS</span></h1>
 
-      <ul class="nav ms-auto me-1">
-        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#0077B5'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+      <ul class="nav mx-auto mx-md-0 ms-md-auto">
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a
+            href="https://www.linkedin.com/in/leonardo-arthur-luchtenberg-silva/" class="nav-link rounded-1"
+            style="color: inherit !important;"
+            onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#0077B5'"
+            onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
               class="bi bi-linkedin"></i></a></li>
-        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#DB4437'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="mailto:leonardoarthu627@gmail.com"
+            class="nav-link rounded-1" style="color: inherit !important;"
+            onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#DB4437'"
+            onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
               class="bi bi-envelope-fill"></i></a></li>
-        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#181717'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="https://github.com/LeonardoArtLS"
+            class="nav-link rounded-1" style="color: inherit !important;"
+            onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#181717'"
+            onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
               class="bi bi-github"></i></a></li>
-        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="" class="nav-link rounded-1" style="color: inherit !important;" onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#25D366'" onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
+        <li class="btn btn-link nav-item text-decoration-none text-reset"><a href="https://wa.me/5547997873199"
+            class="nav-link rounded-1" style="color: inherit !important;"
+            onmouseover="this.style.color='#f9f9f9'; this.style.backgroundColor='#25D366'"
+            onmouseout="this.style.color='inherit'; this.style.backgroundColor='inherit';"><i
               class="bi bi-whatsapp"></i></a></li>
       </ul>
 
@@ -76,7 +92,36 @@
     </nav>
   </header>
 
-  
+  <main>
+
+    <div class="b-divider"></div>
+    <div class="container my-5">
+      <div class="bg-background p-5 text-center text-body-secondary border border-dashed rounded-5">
+        <!-- <div class="mt-5 mb-3 text-body"><i class="bi bi-pin-angle-fill h1"></i></div> -->
+        <div class="mb-3 text-body"><i class="bi bi-person-raised-hand display-1"></i></div>
+        <h1 class="text-body">Quem Sou?</h1>
+        <h5 class="col-md-6 mx-auto mt-2 ">
+          Sou um <span class="text-body">Desenvolvedor Web Junior</span> com <span class="text-body">18 anos de idade</span> dedicado a aprimorar minhas habilidades técnicas.
+          Concluí recentemente o curso do <span class="text-body">Entra21</span>, onde adquiri conhecimentos sólidos em <span class="text-body">PHP,
+          JavaScript, CSS, HTML e MySQL.</span> Minha jornada nesse curso foi incrível e me proporcionou uma base sólida para
+          minha carreira profissional.
+        </h5>
+        <div class="d-md-flex align-items-start justify-content-start mx-auto ">
+          <h5 class="col-md-4 mx-auto mt-2">
+            Atualmente, estou no <span class="text-body">primeiro semestre</span> do curso de <span class="text-body">Sistemas para Internet no IFC</span>, onde estou ansioso para
+            expandir ainda mais meu conhecimento e desenvolver novas habilidades que me ajudarão a me destacar no
+            mercado de trabalho.
+          </h5>
+          <h5 class="col-md-4 mx-auto mt-2">
+            Durante minha formação no <span class="text-body">Entra21</span>, ganhei familiaridade com tecnologias essenciais para o <span class="text-body">Desenvolvimento
+            Web</span>, como <span class="text-body">Bootstrap e Laravel</span>, o que me deixou preparado para enfrentar desafios do mundo real.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
 
 
 
@@ -213,7 +258,7 @@
   <script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  
+
 </body>
 
 </html>

@@ -1,46 +1,155 @@
 @import "../vendor/twbs/bootstrap/scss/functions";
 @import "../vendor/twbs/bootstrap/scss/variables";
 @import "../vendor/twbs/bootstrap/scss/variables-dark";
+@import "../vendor/twbs/bootstrap/scss/maps";
+@import "../vendor/twbs/bootstrap/scss/mixins";
+@import "../vendor/twbs/bootstrap/scss/root";
 
-// Add a custom color to $theme-colors
-$custom-colors: (
-  "custom-color": #712cf9
+$main: #000;
+$sub: #000;
+$background: #f9f9f9;
+
+$custom-colors:(
+    "main": $main,
+    "sub": $sub,
+    "background": $background,
+    // "extra": $extra,
+    // "custom": $custom,
+    // "support": $support,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-@import "../vendor/twbs/bootstrap/scss/maps";
-@import "../vendor/twbs/bootstrap/scss/mixins";
 @import "../vendor/twbs/bootstrap/scss/utilities";
 
-// Add a custom color to new theme maps
+$all-colors: map-merge-multiple(
+  (
+    "main": $main,
+    "sub": $sub,
+    "background": $background,
+  ),
+  $blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans
+);
 
-// Light mode
-$custom-colors-text: ("custom-color": #712cf9);
-$custom-colors-bg-subtle: ("custom-color": #5500ff);
-$custom-colors-border-subtle: ("custom-color": #bfa1fc);
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
 
-$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
-$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
-$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
 
-// Dark mode
-$custom-colors-text-dark: ("custom-color": #7700ff);
-$custom-colors-bg-subtle-dark: ("custom-color": #8951fa);
-$custom-colors-border-subtle-dark: ("custom-color": #7700ff);
-
-$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
-$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
-$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
-
-// Remainder of Bootstrap imports
-@import "../vendor/twbs/bootstrap/scss/root";
 @import "../vendor/twbs/bootstrap/scss/reboot";
 
+@import "../vendor/twbs/bootstrap/scss/bootstrap";
 
-$color-mode-type: media-query;
-@include color-mode(light) {
-
+@mixin text-gradient($color-1, $color-2) {
+  h1,h2,h3,h4,h5,ul.nav li.btn-link a.nav-link:not(:hover) i, i:not(a.nav-link i){
+    color: $color-1;
+    background-image: linear-gradient(to right, $color-1, $color-2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
+
+@include color-mode(white) {
+  .bg-background {
+    color: $background;
+    background-color: $background;
+  }
+}
+@include color-mode(dark) {
+  .bg-background {
+    color: #212529;
+    background-color: #212529;
+  }
+}
+@include color-mode(mush) {
+  .bg-background {
+    color: #fff8f3;
+    background-color: #fff8f3;
+  }
+}
+
+//tema pastel com prismarino
+
+//data-bs-theme
+// --bs-body-color: #62c7b4;
+// --bs-body-color-rgb: ;
+// --bs-body-bg: #e4f1e3;
+// --bs-body-bg-rgb: ;
+
+//color-mode 
+// $main: #62c7b4;
+// $sub: #91d8be;
+// "support": ffde92#,
+// "extra": f0f0d5#,
+// "background": #ebebe6 ou #e4f1e3,
+// "custom": #,
+
+
+
+//tema marrom
+//f4e2db
+//dcb2a5
+//be8477
+//925e55
+//5b4240
+//2a2323
+//000
+
+//tema brown2.0
+// #ece0d1	(236,224,209)
+// #dbc1ac	(219,193,172)
+// #967259	(150,114,89)
+// #634832	(99,72,50)
+// #38220f	(56,34,15)
+
+//thema vintage
+// #24093e	(36,9,62)
+// #760842	(118,8,66)
+// #b72045	(183,32,69)
+// #9ca3e2	(156,163,226)
+// #f9dee5	(249,222,229)
+
+//thema aesthetic
+// #66545e	(102,84,94)
+// #a39193	(163,145,147)
+// #aa6f73	(170,111,115)
+// #eea990	(238,169,144)
+// #f6e0b5	(246,224,181)
+
+
+//tema caputino
+
+//data-bs-theme
+// --bs-body-color: #3c2f2f;
+// --bs-body-color-rgb: 60,47,47;
+// --bs-body-bg: #fff4e6;
+// --bs-body-bg-rgb: 255,244,230;
+
+//color-mode 
+// $main: #4b3832;
+// $sub: #854442;
+
+
+// @include color-mode(light) {
+
+//   @include text-gradient($main, $sub);
+
+// }
+
+
 
 [data-bs-theme="mush"] {
   --bs-blue: #0d6efd;
@@ -114,9 +223,13 @@ $color-mode-type: media-query;
   --bs-body-bg-rgb: 244, 226, 219;
   --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
-  --bs-secondary-color: rgba(222, 226, 230, 0.75);
-  --bs-secondary-color-rgb: 222, 226, 230;
-  --bs-secondary-bg: #343a40;
+  --bs-primary-color: rgba(196, 58, 54, 0.75);
+  --bs-primary-color-rgb: 196, 58, 54;
+  --bs-primary-bg: #c43a36;
+  --bs-primary-bg-rgb: 52, 58, 64;
+  --bs-secondary-color: rgba(196, 58, 54, 0.75);
+  --bs-secondary-color-rgb: 196, 58, 54;
+  --bs-secondary-bg: #c43a36;
   --bs-secondary-bg-rgb: 52, 58, 64;
   --bs-tertiary-color: rgba(222, 226, 230, 0.5);
   --bs-tertiary-color-rgb: 222, 226, 230;
@@ -158,7 +271,7 @@ $color-mode-type: media-query;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
   --bs-form-valid-color: #75b798;
   --bs-form-valid-border-color: #75b798;
-  --bs-form-invalid-color: #ea868f;git sta
+  --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
   .active{
     background-color: #c43a36;
