@@ -13223,22 +13223,31 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+[data-bs-theme=light] {
+  --bs-background-color: #f8f9fa;
+}
 [data-bs-theme=light] .bg-background {
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
 }
 [data-bs-theme=light] .bg-background-gradient {
   background: linear-gradient(to right, #FA9239, #FA9239, #FA9239);
 }
 
+[data-bs-theme=dark] {
+  --bs-background-color: #2b3035;
+}
 [data-bs-theme=dark] .bg-background {
-  background-color: #2b3035;
+  background-color: var(--background-color);
 }
 [data-bs-theme=dark] .bg-background-gradient {
   background: linear-gradient(to right, #ff0000 0%, #ff7f00 25%, #ffff00 50%, #00ff00 75%, #0000ff 100%);
 }
 
+[data-bs-theme=mush] {
+  --bs-background-color: #fff8f3;
+}
 [data-bs-theme=mush] .bg-background {
-  background-color: #fff8f3;
+  background-color: var(--bs-background-color);
 }
 [data-bs-theme=mush] .bg-background-gradient {
   background: linear-gradient(to right, #ff0000 0%, #ff7f00 25%, #ffff00 50%, #00ff00 75%, #0000ff 100%);
