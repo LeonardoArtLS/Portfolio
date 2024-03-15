@@ -13224,7 +13224,6 @@ textarea.form-control-lg {
   }
 }
 [data-bs-theme=light] .bg-background {
-  color: #f8f9fa;
   background-color: #f8f9fa;
 }
 [data-bs-theme=light] .bg-background-gradient {
@@ -13232,7 +13231,6 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] .bg-background {
-  color: #2b3035;
   background-color: #2b3035;
 }
 [data-bs-theme=dark] .bg-background-gradient {
@@ -13240,7 +13238,6 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=mush] .bg-background {
-  color: #fff8f3;
   background-color: #fff8f3;
 }
 [data-bs-theme=mush] .bg-background-gradient {

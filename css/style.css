@@ -5,7 +5,7 @@ body {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: --bs-body-secondary --bs-body;
+  scrollbar-color: var(--bs-body-color) var(--bs-body-bg);
 }
 
 .border-dashed {
@@ -105,5 +105,29 @@ body {
   grid-auto-flow: column;
   grid-auto-columns: 10rem;
   justify-items: stretch;
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
+}
+
+.max-width-1 {
+  max-width: 1100px;
+}
+
+.max-width-2 {
+  max-width: 80px;
+}
+
+.card-hover {
+  box-sizing: border-box;
+  background: var(--bs-body-bg);
+  border: 1px dashed var(--bs-body-bg);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border-radius: 17px;
+  transition: all 0.5s;
+  color: var(--bs-body-color);
+}
+.card-hover:hover {
+  border: 1px dashed var(--bs-body-color);
+  transform: scale(1.05);
 }/*# sourceMappingURL=style.css.map */

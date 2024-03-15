@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body{
-  font-family: Poppins,sans-serif;
+body {
+  font-family: Poppins, sans-serif;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: --bs-body-secondary --bs-body;
+  scrollbar-color: var(--bs-body-color) var(--bs-body-bg);
 }
 
 .border-dashed {
@@ -16,10 +16,11 @@ body{
 .b-divider {
   width: 100%;
   height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
   border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
 .black-and-white {
@@ -30,14 +31,14 @@ body{
     filter: grayscale(0%);
   }
 }
-.border-body{
+.border-body {
   border-color: var(--bs-body-color) !important;
 }
 .profile-photo {
   background-image: url("../img/img4.jpg");
   border-color: var(--bs-body-color) !important;
   &:hover {
-    scale:1.03;
+    scale: 1.03;
     border-color: var(--bs-secondary-color) !important;
   }
 
@@ -93,7 +94,6 @@ body{
     @media (max-width: 900px) {
       margin-bottom: 5rem;
     }
-
   }
 }
 
@@ -102,63 +102,36 @@ body{
     translate: calc(-8 * 10rem);
   }
 }
-.carousel{
+.carousel {
   overflow: hidden;
 }
-.wrapper{
+.wrapper {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 10rem;
 
   justify-items: stretch;
 
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
 }
-// .card {
-//     perspective: 1000px;
-//     width: 200px;
-//     height: 300px;
-//     position: relative;
 
-//     .card-inner {
-//       width: 100%;
-//       height: 100%;
-//       transition: transform 0.5s;
-//       transform-style: preserve-3d;
-//     }
-
-//     &:hover .card-inner {
-//       transform: rotateY(180deg);
-//     }
-
-//     .card-front,
-//     .card-back {
-//       width: 100%;
-//       height: 100%;
-//       position: absolute;
-//       backface-visibility: hidden;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//     }
-
-//     .card-front {
-//       background-color: #f0f0f0;
-//     }
-
-//     .card-back {
-//       background-color: #ccc;
-//       transform: rotateY(180deg);
-//     }
-//   }
-
-//   <div class="card" id="card">
-//   <div class="card-inner">
-//     <div class="card-front">
-//       <!-- Conteúdo da frente do cartão -->
-//     </div>
-//     <div class="card-back">
-//       <!-- Conteúdo do verso do cartão -->
-//     </div>
-//   </div>
-// </div>
+.max-width-1 {
+  max-width: 1100px;
+}
+.max-width-2{
+  max-width: 80px;
+}
+.card-hover {
+  box-sizing: border-box;
+  background: var(--bs-body-bg);
+  border: 1px dashed var(--bs-body-bg);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  transition: all 0.5s;
+  color: var(--bs-body-color);
+  &:hover {
+    border: 1px dashed var(--bs-body-color);
+    transform: scale(1.05);
+  }
+}

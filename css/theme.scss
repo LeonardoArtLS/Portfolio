@@ -65,7 +65,6 @@ $utilities: map-merge(
 
 @include color-mode(light) {
   .bg-background {
-    color: #f8f9fa;
     background-color: #f8f9fa;
   }
   .bg-background-gradient{
@@ -78,7 +77,6 @@ $utilities: map-merge(
 }
 @include color-mode(dark) {
   .bg-background {
-    color: #2b3035;
     background-color: #2b3035;
   }
   .bg-background-gradient{
@@ -93,7 +91,6 @@ $utilities: map-merge(
 }
 @include color-mode(mush) {
   .bg-background {
-    color: #fff8f3;
     background-color: #fff8f3;
   }
   .bg-background-gradient{
