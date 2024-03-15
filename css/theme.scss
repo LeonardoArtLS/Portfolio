@@ -65,8 +65,8 @@ $utilities: map-merge(
 
 @include color-mode(light) {
   .bg-background {
-    color: $background;
-    background-color: $background;
+    color: #f8f9fa;
+    background-color: #f8f9fa;
   }
   .bg-background-gradient{
     background: linear-gradient(to right, 
@@ -78,8 +78,8 @@ $utilities: map-merge(
 }
 @include color-mode(dark) {
   .bg-background {
-    color: #212529;
-    background-color: #212529;
+    color: #2b3035;
+    background-color: #2b3035;
   }
   .bg-background-gradient{
     background: linear-gradient(to right, 

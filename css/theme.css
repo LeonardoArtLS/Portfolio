@@ -13224,16 +13224,16 @@ textarea.form-control-lg {
   }
 }
 [data-bs-theme=light] .bg-background {
-  color: #f9f9f9;
-  background-color: #f9f9f9;
+  color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 [data-bs-theme=light] .bg-background-gradient {
   background: linear-gradient(to right, #FA9239, #FA9239, #FA9239);
 }
 
 [data-bs-theme=dark] .bg-background {
-  color: #212529;
-  background-color: #212529;
+  color: #2b3035;
+  background-color: #2b3035;
 }
 [data-bs-theme=dark] .bg-background-gradient {
   background: linear-gradient(to right, #ff0000 0%, #ff7f00 25%, #ffff00 50%, #00ff00 75%, #0000ff 100%);
