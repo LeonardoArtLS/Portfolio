@@ -13377,7 +13377,6 @@ textarea.form-control-lg {
   --bs-form-invalid-border-color: #ea868f;
 }
 [data-bs-theme=mush] .active {
-  background-color: #c43a36;
   color: #f4e2db;
 }
 [data-bs-theme=mush] .theme:hover:not(.active) {
