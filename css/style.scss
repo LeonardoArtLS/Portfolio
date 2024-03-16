@@ -9,7 +9,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--bs-body-color) var(--bs-body-bg);
+  scrollbar-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) var(--bs-body-bg);
+}
+
+.remove-padding-sm{
+  @media (max-width: 576px) {
+    padding:0;
+  }
 }
 
 .border-dashed {
@@ -36,16 +42,16 @@ body {
 }
 
 .border-body {
-  border-color: var(--bs-body-color) !important;
+  border-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
 .profile-photo {
   background-image: url("../img/img4.jpg");
-  border-color: var(--bs-body-color) !important;
+  border-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 
   &:hover {
     scale: 1.03;
-    border-color: var(--bs-secondary-color) !important;
+    border-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
   }
 
   background-size: cover;
@@ -130,22 +136,21 @@ body {
 
 .max-width-icon {
   max-width: 80px;
-  margin-bottom: 5px;
 }
 
 .card-hover {
   box-sizing: border-box;
   background: var(--bs-body-bg);
-  border: 1px dashed var(--bs-body-bg);
+  border: 2px dashed var(--bs-body-bg);
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(6px);
   border-radius: 17px;
   transition: all 0.5s;
-  color: var(--bs-body-color);
-
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  border: 1px dashed rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  
   &:hover {
-    border: 1px dashed var(--bs-body-color);
-    transform: scale(1.05);
+    transform: scale(1.015);
   }
 
   position: relative;
@@ -157,4 +162,9 @@ body {
   text-align:center;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+.info span{
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  font-weight: bold;
 }
