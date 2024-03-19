@@ -64,8 +64,9 @@
       <!-- <i class="bi bi-eyeglasses"></i>, <i class="bi bi-file-image-fill"></i>, <i class="bi bi-fire"></i>, <i class="bi bi-gift-fill"></i>, <i class="bi bi-hurricane"></i>, <i class="bi bi-lightning-fill"></i>, <i class="bi bi-cloudy-fill"></i> -->
     </ul>
   </div>
+
   <header>
-    <nav class="navbar px-2">
+    <nav class="navbar px-2" id="home">
       <h4 class="mx-auto mx-lg-0 px-lg-3 my-3 my-md-0 h4 text-body-secondary">
         <span class="text-body">Leonardo</span>Art<span class="text-body">LS</span>
       </h4>
@@ -99,54 +100,35 @@
       </ul>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav-scroll" style="display: none;">
+    <nav class="navbar">
 
-      <ul class="nav d-flex align-items-center justify-content-end nav-underline">
-        <li class="btn btn-link remove-padding-sm nav-item text-decoration-none text-reset">
-          <a class="nav-link text-body border-3 fw-bold" href="#home">Home</a>
-        </li>
-        <li class="btn btn-link remove-padding-sm nav-item text-decoration-none text-reset">
-          <a class="nav-link text-body border-3 fw-bold" href="#conhecimentos">Conhecimentos</a>
-        </li>
-        <li class="btn btn-link remove-padding-sm nav-item text-decoration-none text-reset">
-          <a class="nav-link text-body border-3 fw-bold" href="#quemSou">Quem Sou</a>
-        </li>
-      </ul>
+      <div class="navegation bg-background">
+        <button type="button" class="navegation_button">
+          <a href="#conhecimentos"><i class="bi bi-lightbulb-fill navegation_icon"></i></a>
+        </button>
+        <button type="button" class="navegation_button">
+          <a href="#quemSou"><i class="bi bi-question-lg navegation_icon"></i></a>
+        </button>
+        <button type="button" class="navegation_button">
+          <a href="#home"><i class="bi bi-house-fill navegation_icon"></i></a>
+        </button>
+        <button type="button" class="navegation_button">
+          <a href="#projetos"><i class="bi bi-braces navegation_icon"></i></a>
+        </button>
+        <button type="button" class="navegation_button">
+          <a href="#contato"><i class="bi bi-telephone-fill navegation_icon"></i></a>
+        </button>
+      </div>
+
     </nav>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var showNavbarElement = document.querySelector(".show-navbar");
-        if (!showNavbarElement) return;
-
-        var startPos =
-          showNavbarElement.getBoundingClientRect().top + window.pageYOffset;
-
-        window.addEventListener("scroll", function () {
-          var scrollTop =
-            window.pageYOffset || document.documentElement.scrollTop;
-          var navbar = document.getElementById("nav-scroll");
-
-          var showNavbarPos =
-            showNavbarElement.getBoundingClientRect().top +
-            window.pageYOffset;
-
-          if (scrollTop > showNavbarPos) {
-            navbar.style.display = "block";
-          } else {
-            navbar.style.display = "none";
-          }
-        });
-      });
-    </script>
   </header>
 
   <main>
     <div class="container-fluid p-0" data-bs-spy="scroll" data-bs-target="nav-scroll" data-bs-root-margin="0px 0px -40%"
       data-bs-smooth-scroll="true" tabindex="0">
       <div
-        class="row-fluid d-flex flex-column flex-lg-row justify-content-center align-items-center pt-5 py-md-5 my-lg-5"
-        id="home">
+        class="row-fluid d-flex flex-column flex-lg-row justify-content-center align-items-center pt-5 py-md-5 my-lg-5">
         <div class="order-2 order-lg-1 my-2 my-lg-0 custom-col">
           <h1 class="text-center text-lg-start">
             Full-Stack PHP Developer
@@ -295,9 +277,9 @@
         </div>
       </div>
 
-      <div class="row-fluid my-5 mx-auto">
+      <div class="row-fluid my-5 mx-auto" id="quemSou">
         <div class="bg-background p-5 text-center text-body-secondary col-11 col-lg-10 mx-auto card-hover max-width-1"
-          id="quemSou">
+          >
           <div class="mb-3 text-body fs-1">
             <i class="bi bi-person-raised-hand display-3"></i>
           </div>
@@ -320,7 +302,7 @@
       <div class="b-divider"></div>
 
       <div class="row my-5 mx-auto">
-        <div class="col-12 mx-auto text-center mb-5">
+        <div class="col-12 mx-auto text-center mb-5" id="projetos">
           <div class="mb-3 text-body fs-1">
             <i class="bi bi-braces display-3"></i>
           </div>
@@ -330,12 +312,12 @@
         <div class="row">
           <div class="col-12 d-flex mx-auto justify-content-center align-items-center">
             <div class="col-6 d-flex align-items-center justify-content-center ms-2">
-              <div class="m-5 info">
+              <div class="m-4 info">
                 <h2 class="fw-bold fs-1">FacilitaAí</h2>
                 <p>O site proporciona uma plataforma simplificada para a <span>conexão entre profissionais e
-                    clientes</span> em busca de <span>serviços específicos.</span></p>
-                <p>Os <span>profissionais</span> podem <span>criar perfis personalizados</span> para exibir suas
-                  habilidades, experiências e portfólios, além de <span>receber feedback dos clientes.</span></p>
+                    clientes</span> em busca de <span>serviços específicos</span>, onde os <span>profissionais</span>
+                  podem <span>criar perfis personalizados</span> para exibir suas
+                   experiências e portfólios, além de <span>receber feedback dos clientes.</span></p>
                 <p>Os <span>clientes</span> podem facilmente <span>localizar profissionais</span> em <span>sua
                     cidade</span>, utilizando a <span>funcionalidade de busca</span> para encontrar o <span>serviço
                     desejado.</span> Uma vez encontrados, têm a oportunidade de explorar <span>detalhes dos
@@ -345,6 +327,11 @@
                   logo após o serviço, podem <span>fornecer feedback</span> valioso.</p>
                 <p><span>Ambas as partes</span> têm acesso a um <span>painel</span> para manter as <span>informações
                     atualizadas</span>, facilitando a conexão e simplificando o processo de contratação.</p>
+                <p>O projeto <span>FacilitaAí</span> foi desenvolvido como parte do <span>TCC do curso Entra21</span>,
+                  realizado por um <span>grupo de 5
+                  pessoas</span>, <span>incluindo eu</span>, com o nome de <span>KodaX</span>. Foi uma <span>experiência incrível</span> trabalhar com a <span>equipe</span> no
+                  <span>desenvolvimento deste projeto</span>, que visa <span>simplificar a conexão</span> entre <span>profissionais e clientes</span> em busca
+                  de serviços específicos.</p>
 
                 <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-start gap-3">
                   <li>
@@ -379,16 +366,21 @@
                 <div class="col-4 rounded-4 p-1">
                   <div class="col-12 d-flex flex-wrap bg-background rounded-4 p-2">
                     <div class="col-6">
-                      <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="" class="img-fluid p-2"></a>
+                      <a href="https://www.instagram.com/facilitaai.web/"><img
+                          src="Icons/instagram.svg" alt="Instagram Logo"
+                          class="img-fluid scale p-2"></a>
                     </div>
                     <div class="col-6">
-                      <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="" class="img-fluid p-2"></a>
+                      <a href="https://kodaxcompany.github.io/kodaxPortfolio/"><img src="img/KodaX.png"
+                          alt="KodaX Logo" class="img-fluid scale p-2 bg-body-secondary rounded-4"></a>
                     </div>
                     <div class="col-6">
-                      <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="" class="img-fluid p-2"></a>
+                      <a href=""><img src="Icons/github.svg"
+                          alt="" class="img-fluid scale p-2"></a>
                     </div>
                     <div class="col-6">
-                      <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="" class="img-fluid p-2"></a>
+                      <a href=""><img src="Icons/github.svg"
+                          alt="" class="img-fluid scale p-2"></a>
                     </div>
                   </div>
                 </div>
@@ -406,7 +398,7 @@
             </div>
           </div>
 
-          <!-- <div class="col-12 d-flex mx-auto justify-content-center align-items-center" aria-hidden="true">
+          <div class="col-12 d-flex mx-auto justify-content-center align-items-center" aria-hidden="true">
             <div class="col-5 my-auto m-5">
               <div class="col-12 d-flex flex-wrap">
                 <img src="img/FacilitaAí.png" alt="FacilitaAí Logo" class="col-4 img-fluid rounded-4 p-1">
@@ -425,7 +417,7 @@
             </div>
             <div class="col-6 d-flex align-items-center justify-content-center">
               <div class="m-5 info">
-                <h2 class="fw-bold fs-1">FacilitaAí</h2>
+                <h2 class="fw-bold fs-1">Portfólio</h2>
                 <p>O site proporciona uma plataforma simplificada para a <span>conexão entre profissionais e
                     clientes</span> em busca de <span>serviços específicos.</span></p>
                 <p>Os <span>profissionais</span> podem <span>criar perfis personalizados</span> para exibir suas
@@ -465,78 +457,13 @@
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div class="col-12 d-flex mx-auto justify-content-center align-items-center" aria-hidden="true">
-            <div class="col-6 d-flex align-items-center justify-content-center ms-2">
-              <div class="m-5 info">
-                <h2 class="fw-bold fs-1">FacilitaAí</h2>
-                <p>O site proporciona uma plataforma simplificada para a <span>conexão entre profissionais e
-                    clientes</span> em busca de <span>serviços específicos.</span></p>
-                <p>Os <span>profissionais</span> podem <span>criar perfis personalizados</span> para exibir suas
-                  habilidades, experiências e portfólios, além de <span>receber feedback dos clientes.</span></p>
-                <p>Os <span>clientes</span> podem facilmente <span>localizar profissionais</span> em <span>sua
-                    cidade</span>, utilizando a <span>funcionalidade de busca</span> para encontrar o <span>serviço
-                    desejado.</span> Uma vez encontrados, têm a oportunidade de explorar <span>detalhes dos
-                    perfis</span>,
-                  como <span>avaliações</span> e <span>portfólios</span>, e entrar em <span>contato</span> diretamente,
-                  e
-                  logo após o serviço, podem <span>fornecer feedback</span> valioso.</p>
-                <p><span>Ambas as partes</span> têm acesso a um <span>painel</span> para manter as <span>informações
-                    atualizadas</span>, facilitando a conexão e simplificando o processo de contratação.</p>
-
-                <ul class="list-unstyled d-flex flex-wrap align-items-center justify-content-start gap-3">
-                  <li>
-                    <img src="Icons/laravel.svg" alt="Laravel Logo" width="45" height="45" />
-                  </li>
-                  <li>
-                    <img src="Icons/bootstrap.svg" alt="Bootstrap Logo" width="45" height="45" />
-                  </li>
-                  <li>
-                    <img src="Icons/php.svg" alt="PHP Logo" width="45" height="45" />
-                  </li>
-                  <li>
-                    <img src="Icons/html-5.svg" alt="HTML-5 Logo" width="45" height="45" />
-                  </li>
-                  <li>
-                    <img src="Icons/css3.svg" alt="CSS3 Logo" width="45" height="45" />
-                  </li>
-                  <li>
-                    <img src="Icons/mysql.svg" alt="MySQL Logo" width="45" height="45" />
-                  </li>
-                  <li>
-                    <img src="Icons/javascript.svg" alt="JavaScript Logo" width="45" height="45" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-5 my-auto">
-              <div class="col-12 d-flex flex-wrap">
-                <img src="img/FacilitaAí.png" alt="FacilitaAí Logo" class="col-4 img-fluid rounded-4 p-1">
-                <img src="img/FacilitaAí2.png" alt="FacilitaAí Logo" class="col-4 img-fluid rounded-4 p-1">
-                <img src="img/FacilitaAí.png" alt="FacilitaAí Logo" class="col-4 img-fluid rounded-4 p-1">
-              </div>
-              <div class="col-12 d-flex">
-                <div class="col-8">
-                  <img src="img/FacilitaAí2.png" alt="FacilitaAí Logo" class="img-fluid rounded-4 p-1">
-                </div>
-                <div class="col-4">
-                  <img src="img/FacilitaAí.png" alt="FacilitaAí Logo" class="img-fluid rounded-4 p-1">
-                  <img src="img/FacilitaAí2.png" alt="FacilitaAí Logo" class="img-fluid rounded-4 p-1">
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="col-12 text-center my-5">
-            <h3>Em breve mais projetos...</h3>
           </div>
 
         </div>
       </div>
 
       <div class="b-divider"></div>
-
+    
     </div>
   </main>
 

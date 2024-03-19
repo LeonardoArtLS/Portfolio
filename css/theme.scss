@@ -64,7 +64,7 @@ $utilities: map-merge(
 }
 
 @include color-mode(light) {
-  --bs-background-color: #f8f9fa;
+  --background-color: #f8f9fa;
   .bg-background {
     background-color: var(--background-color);
   }
@@ -77,7 +77,7 @@ $utilities: map-merge(
   }
 }
 @include color-mode(dark) {
-  --bs-background-color: #2b3035;
+  --background-color: #2b3035;
   .bg-background {
     background-color: var(--background-color);
   }

@@ -13224,7 +13224,7 @@ textarea.form-control-lg {
   }
 }
 [data-bs-theme=light] {
-  --bs-background-color: #f8f9fa;
+  --background-color: #f8f9fa;
 }
 [data-bs-theme=light] .bg-background {
   background-color: var(--background-color);
@@ -13234,7 +13234,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] {
-  --bs-background-color: #2b3035;
+  --background-color: #2b3035;
 }
 [data-bs-theme=dark] .bg-background {
   background-color: var(--background-color);
