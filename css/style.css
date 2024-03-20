@@ -3,12 +3,15 @@ body {
   font-family: Poppins, sans-serif;
 }
 
+html {
+  scrollbar-color: var(--bs-body-color) var(--bs-body-bg);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) var(--bs-body-bg);
 }
 
 @media (max-width: 576px) {
@@ -186,6 +189,9 @@ body {
 
 .navegation button a {
   color: var(--bs-body-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .navegation_button {
@@ -200,20 +206,11 @@ body {
   cursor: pointer;
 }
 
-.navegation_button:hover > .navegation_icon {
-  stroke: #323232;
-}
-
-.navegation_button:active {
-  background-color: rgba(128, 128, 128, 0.35);
-}
-
-.navegation_button:active > .navegation_icon {
-  stroke: white;
-}
-
 .navegation_button:has(.active) {
   background-color: var(--bs-primary);
+  transition: all 0.3s ease;
+  margin-inline: 3px;
+  padding-inline: 25px;
 }
 
 .navegation_button:has(.active) a i {
@@ -227,4 +224,5 @@ body {
 
 .navegation_button a i.bi-house-fill {
   color: var(--bs-body-bg);
+  width: 15px;
 }/*# sourceMappingURL=style.css.map */
