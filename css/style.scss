@@ -133,6 +133,9 @@ body {
 .max-width-1 {
   max-width: 1100px;
 }
+.max-width-2{
+  max-width: 1300px;
+}
 
 .max-width-icon {
   max-width: 80px;
@@ -177,6 +180,9 @@ body {
   position:fixed;
   left: 50%;
   right: auto;
+  @media (max-width: 994px) {
+    bottom: 10px;
+  }
   transform: translate(-50%, -50%);
   padding: 3px;
   width: -moz-fit-content;

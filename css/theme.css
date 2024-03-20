@@ -13224,7 +13224,7 @@ textarea.form-control-lg {
   }
 }
 [data-bs-theme=light] {
-  --background-color: #f8f9fa;
+  --background-color: #f1f1f1;
 }
 [data-bs-theme=light] .bg-background {
   background-color: var(--background-color);

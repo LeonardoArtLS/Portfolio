@@ -64,7 +64,7 @@ $utilities: map-merge(
 }
 
 @include color-mode(light) {
-  --background-color: #f8f9fa;
+  --background-color: #f1f1f1;
   .bg-background {
     background-color: var(--background-color);
   }
