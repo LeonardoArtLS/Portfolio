@@ -22,10 +22,6 @@ html {
   }
 }
 
-.border-dashed {
-  --bs-border-style: dashed;
-}
-
 .b-divider {
   width: 100%;
   height: 3rem;
@@ -141,6 +137,9 @@ html {
 .max-width-2 {
   max-width: 1300px;
 }
+.max-width-3{
+    max-width: 500px;
+}
 
 .max-width-icon {
   max-width: 80px;
@@ -148,18 +147,17 @@ html {
 
 .card-hover {
   box-sizing: border-box;
-  background: var(--bs-body-bg);
-  border: 2px dashed var(--bs-body-bg);
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(6px);
+
   border-radius: 17px;
   transition: all 0.5s;
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
-  border: 1px dashed rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
+  border: 1px dashed rgba(var(--bs-body-color-rgb), 0.3);
+  
+  background: linear-gradient(145deg, --bs-body-bg, --bs-body-secondary);
 
-  &:hover {
+    &:hover {
     transform: scale(1.015);
-  }
+    }
 
   position: relative;
   overflow: hidden;
@@ -175,7 +173,9 @@ html {
 .scale:hover {
   transform: scale(1.04)
 }
-
+.scale2:hover{
+  transform: scale(1.01)
+}
 .info span {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
   font-weight: bold;
@@ -241,4 +241,9 @@ html {
 .navegation_button a i.bi-house-fill {
   color: var(--bs-body-bg);
   width: 15px;
+}
+
+.LinkIcon{
+  fill: var(--bs-body-color);
+  stroke: var(--bs-body-color);
 }
