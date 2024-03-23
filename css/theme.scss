@@ -9,44 +9,35 @@ $main: #000;
 $sub: #000;
 $background: #f9f9f9;
 $background-gradient: #FA9239;
+$gradientlight-1: #FA9239;
+$gradientlight-2: #fc1010;
 
-$custom-colors:(
-    "main": $main,
-    "sub": $sub,
-    "background": $background,
-    // "extra": $extra,
-    // "custom": $custom,
-    // "support": $support,
+$custom-colors: (
+  "main": $main,
+  "sub": $sub,
+  "background": $background,
+  // "extra": $extra,
+  // "custom": $custom,
+  // "support": $support,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../vendor/twbs/bootstrap/scss/utilities";
 
-$all-colors: map-merge-multiple(
-  (
-    "main": $main,
-    "sub": $sub,
-    "background": $background,
-  ),
-  $blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans
-);
+$all-colors: map-merge-multiple(("main": $main,
+      "sub": $sub,
+      "background": $background,
+    ),
+    $blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
 
-$utilities: map-merge(
-  $utilities,
-  (
-    "color": map-merge(
-      map-get($utilities, "color"),
-      (
-        values: map-merge(
-          map-get(map-get($utilities, "color"), "values"),
-          (
-            $all-colors
+$utilities: map-merge($utilities,
+    ("color": map-merge(map-get($utilities, "color"),
+        (values: map-merge(map-get(map-get($utilities, "color"), "values"),
+            ($all-colors ),
           ),
         ),
       ),
-    ),
-  )
-);
+    ));
 
 
 @import "../vendor/twbs/bootstrap/scss/reboot";
@@ -54,7 +45,8 @@ $utilities: map-merge(
 @import "../vendor/twbs/bootstrap/scss/bootstrap";
 
 @mixin text-gradient($color-1, $color-2) {
-  h1,h2,h3,h4,h5,ul.nav li.btn-link a.nav-link:not(:hover) i, i:not(a.nav-link i){
+
+.text-gradient{
     color: $color-1;
     background-image: linear-gradient(to right, $color-1, $color-2);
     -webkit-background-clip: text;
@@ -64,46 +56,64 @@ $utilities: map-merge(
 }
 
 @include color-mode(light) {
-  --background-color: #f1f1f1;
+  --background-color: #f6f6f6;
+
   .bg-background {
     background-color: var(--background-color);
   }
-  .bg-background-gradient{
-    background: linear-gradient(to right, 
-    #FA9239,
-    #FA9239,
-    #FA9239
-);
+
+  .bg-background-gradient {
+    background: linear-gradient(to right,
+        #FA9239,
+        #FA9239,
+        #FA9239);
   }
+  @include text-gradient($gradientlight-1, $gradientlight-2);
 }
+
 @include color-mode(dark) {
-  --background-color: #2b3035;
+  --background-color: rgb(41, 43, 46);
+
   .bg-background {
     background-color: var(--background-color);
   }
-  .bg-background-gradient{
-    background: linear-gradient(to right, 
-    #ff0000 0%,     /* Vermelho */
-    #ff7f00 25%,    /* Laranja */
-    #ffff00 50%,    /* Amarelo */
-    #00ff00 75%,    /* Verde */
-    #0000ff 100%    /* Azul */
-);
+
+  .bg-background-gradient {
+    background: linear-gradient(to right,
+        #ff0000 0%,
+        /* Vermelho */
+        #ff7f00 25%,
+        /* Laranja */
+        #ffff00 50%,
+        /* Amarelo */
+        #00ff00 75%,
+        /* Verde */
+        #0000ff 100%
+        /* Azul */
+      );
   }
 }
+
 @include color-mode(mush) {
   --bs-background-color: #fff8f3;
+
   .bg-background {
     background-color: var(--bs-background-color);
   }
-  .bg-background-gradient{
-    background: linear-gradient(to right, 
-    #ff0000 0%,     /* Vermelho */
-    #ff7f00 25%,    /* Laranja */
-    #ffff00 50%,    /* Amarelo */
-    #00ff00 75%,    /* Verde */
-    #0000ff 100%    /* Azul */
-);
+
+  .bg-background-gradient {
+    background: linear-gradient(to right,
+        #ff0000 0%,
+        /* Vermelho */
+        #ff7f00 25%,
+        /* Laranja */
+        #ffff00 50%,
+        /* Amarelo */
+        #00ff00 75%,
+        /* Verde */
+        #0000ff 100%
+        /* Azul */
+      );
   }
 }
 
@@ -302,10 +312,12 @@ $utilities: map-merge(
   --bs-form-valid-border-color: #75b798;
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
-  .active{
+
+  .active {
     color: #f4e2db;
   }
-  .theme:hover:not(.active){
+
+  .theme:hover:not(.active) {
     background-color: rgba(255, 213, 211, 0.801);
     color: #c43a36
   }

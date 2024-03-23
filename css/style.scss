@@ -44,7 +44,9 @@ html {
 .border-body {
   border-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
-
+.border-dashed{
+  border-style: dashed;
+}
 .profile-photo {
   background-image: url("../img/img4.jpg");
   border-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
@@ -151,12 +153,13 @@ html {
   border-radius: 17px;
   transition: all 0.5s;
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
-  border: 1px dashed rgba(var(--bs-body-color-rgb), 0.3);
+  border: 1.3px dashed rgba(var(--bs-body-color-rgb), 0.8);
   
   background: linear-gradient(145deg, --bs-body-bg, --bs-body-secondary);
 
     &:hover {
     transform: scale(1.015);
+    border-color: rgba(var(--bs-body-color-rgb), 1);
     }
 
   position: relative;
