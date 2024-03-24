@@ -2,11 +2,10 @@
 
 body {
   font-family: Poppins, sans-serif;
-
 }
 
-html {
-  scrollbar-color: var(--bs-body-color) var(--bs-body-bg);
+body {
+  scrollbar-color: var(--bs-body-color) var(--bs-body-bg) !important;
 }
 
 * {
