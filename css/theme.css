@@ -13224,40 +13224,73 @@ textarea.form-control-lg {
   }
 }
 [data-bs-theme=light] {
-  --background-color: #f6f6f6;
+  --background-color: #fcfcfc;
+  --gradient-1: #FA9239;
+  --gradient-2: #fc1010;
+  --background-gradient: linear-gradient(to right, var(--gradient-1),var(--gradient-2));
 }
 [data-bs-theme=light] .bg-background {
   background-color: var(--background-color);
 }
-[data-bs-theme=light] .bg-background-gradient {
-  background: linear-gradient(to right, #FA9239, #FA9239, #FA9239);
+[data-bs-theme=light] .dropdown-item.active {
+  background: var(--background-gradient);
+}
+[data-bs-theme=light] .navegation_button:has(.active) {
+  background: var(--background-gradient);
 }
 [data-bs-theme=light] .text-gradient {
-  color: #FA9239;
-  background-image: linear-gradient(to right, #FA9239, #fc1010);
+  color: var(--gradient-1);
+  background-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 [data-bs-theme=dark] {
-  --background-color: rgb(41, 43, 46);
+  --background-color: #171717;
+  --gradient-1: #5433FF;
+  --gradient-2: #149FF5;
+  --background-gradient: linear-gradient(to right, var(--gradient-1),var(--gradient-2));
+  --bs-body-bg: #212121;
 }
 [data-bs-theme=dark] .bg-background {
   background-color: var(--background-color);
 }
-[data-bs-theme=dark] .bg-background-gradient {
-  background: linear-gradient(to right, #ff0000 0%, #ff7f00 25%, #ffff00 50%, #00ff00 75%, #0000ff 100%);
+[data-bs-theme=dark] .dropdown-item.active {
+  background: var(--background-gradient);
+}
+[data-bs-theme=dark] .navegation_button:has(.active) {
+  background: var(--background-gradient);
+}
+[data-bs-theme=dark] .text-gradient {
+  color: var(--gradient-1);
+  background-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 [data-bs-theme=mush] {
   --bs-background-color: #fff8f3;
+  --gradient-1: #b6ff57;
+  --gradient-2: #5FE400;
+  --background-gradient: linear-gradient(to right, var(--gradient-1),var(--gradient-2));
 }
 [data-bs-theme=mush] .bg-background {
   background-color: var(--bs-background-color);
 }
-[data-bs-theme=mush] .bg-background-gradient {
-  background: linear-gradient(to right, #ff0000 0%, #ff7f00 25%, #ffff00 50%, #00ff00 75%, #0000ff 100%);
+[data-bs-theme=mush] .dropdown-item.active {
+  background: var(--background-gradient);
+}
+[data-bs-theme=mush] .navegation_button:has(.active) {
+  background: var(--background-gradient);
+}
+[data-bs-theme=mush] .text-gradient {
+  color: var(--gradient-1);
+  background-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 [data-bs-theme=mush] {
@@ -13285,7 +13318,7 @@ textarea.form-control-lg {
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #623CEA;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -13326,9 +13359,9 @@ textarea.form-control-lg {
   --bs-dark-border-subtle: #343a40;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color: #c43a36;
-  --bs-body-color-rgb: 196, 58, 54;
-  --bs-body-bg: #f4e2db;
+  --bs-body-color: #080705;
+  --bs-body-color-rgb: 8, 7, 5;
+  --bs-body-bg: #FFF7E3;
   --bs-body-bg-rgb: 244, 226, 219;
   --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
@@ -13336,7 +13369,7 @@ textarea.form-control-lg {
   --bs-primary-color-rgb: 196, 58, 54;
   --bs-primary-bg: #c43a36;
   --bs-primary-bg-rgb: 52, 58, 64;
-  --bs-secondary-color: rgba(196, 58, 54, 0.75);
+  --bs-secondary-color: #080705;
   --bs-secondary-color-rgb: 196, 58, 54;
   --bs-secondary-bg: #c43a36;
   --bs-secondary-bg-rgb: 52, 58, 64;
@@ -13382,11 +13415,4 @@ textarea.form-control-lg {
   --bs-form-valid-border-color: #75b798;
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
-}
-[data-bs-theme=mush] .active {
-  color: #f4e2db;
-}
-[data-bs-theme=mush] .theme:hover:not(.active) {
-  background-color: rgba(255, 213, 211, 0.801);
-  color: #c43a36;
 }/*# sourceMappingURL=theme.css.map */

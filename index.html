@@ -13,10 +13,11 @@
   <title>Portfólio | Leonardo Arthur</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="nav-scroll" data-bs-root-margin="60% 0px -40%"
+data-bs-smooth-scroll="true" tabindex="0">
   <div class="dropdown dropup-center dropup bd-mode-toggle col-3 position-fixed bottom-0 end-0 mb-sm-4 me-sm-4 mb-2 me-2"
     style="z-index: 9999;">
-    <button class="btn bg-body border border-body dropdown-toggle d-flex align-items-center justify-content-end ms-auto rounded-5 px-3"
+    <button class="btn bg-body border border-body dropdown-toggle d-flex align-items-center justify-content-end ms-auto rounded-5 px-3 button-theme"
       id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
       <i class="bi bi-droplet-fill me-1"></i>
       <svg class="bi theme-icon-active d-none">
@@ -66,9 +67,9 @@
   </div>
 
   <header>
-    <nav class="navbar px-2" id="home">
-      <h4 class="mx-auto mx-lg-0 px-lg-3 my-3 my-md-0 h4 text-body-secondary">
-        <span class="text-body">Leonardo</span>Art<span class="text-body">LS</span>
+    <nav class="navbar px-2"  id="home">
+      <h4 class="mx-auto mx-lg-0 px-lg-3 my-3 my-md-0 h4 text-gradient">
+        <span class="text-body">Leonardo</span>Art<span class="text-body">LS</span>.
       </h4>
 
       <ul class="nav mx-auto mx-lg-0 ms-lg-auto">
@@ -124,20 +125,19 @@
 
   </header>
 
-  <main>
-    <div class="container-fluid p-0" data-bs-spy="scroll" data-bs-target="nav-scroll" data-bs-root-margin="0px 0px -40%"
-      data-bs-smooth-scroll="true" tabindex="0">
+  <main >
+    <div class="container-fluid p-0">
       <div
         class="row-fluid d-flex flex-column flex-lg-row justify-content-center align-items-center pt-5 py-md-5 my-lg-5">
         <div class="order-2 order-lg-1 my-2 my-lg-0 ps-lg-4 ps-xl-0 custom-col">
           <h1 class="text-center text-lg-start" tabindex="50">
-            Full-Stack PHP Developer
-            <lord-icon class="align-text-bottom border-body" src="/Icons/computerIcon.json" trigger="hover" style="
+            <span class="text-gradient">Full-Stack</span> PHP Developer<span class="text-gradient">.</span>
+            <!-- <lord-icon class="align-text-bottom border-body" src="/Icons/computerIcon.json" trigger="hover" style="
                   width: 5.5rem;
                   height: 5.5rem;
                   filter: drop-shadow(0 0 0.5px rgba(0, 0, 0, 0.5));
                 ">
-            </lord-icon>
+            </lord-icon> -->
           </h1>
 
           <p class="text-body-secondary text-center text-lg-start text-break col-10 mx-auto mx-lg-0">
@@ -151,7 +151,7 @@
         </div>
       </div>
 
-      <div class="row-fluid col-12 p-0 show-navbar">
+      <div class="row-fluid col-12 p-0">
         <div class="col-12 p-0 border-body">
           <hr class="hr opacity-100 col-10 border-5 ms-auto" />
           <hr class="hr opacity-100 col-8 border-5 ms-auto" />
@@ -162,12 +162,9 @@
       </div>
 
       <div class="row-fluid my-5" id="conhecimentos">
-        <div class="bg-background p-5 text-center text-body-secondary col-11 col-lg-10 max-width-1 mx-auto card-hover">
-          <div class="col-12 my-auto text-lg-start mb-2">
-            <div class="mb-3 text-center text-body">
-              <i class="bi bi-person-walking display-3"></i>
-            </div>
-            <h1 class="fs-2 text-center text-body">Conhecimentos</h1>
+        <div class="bg-background p-5 text-center text-body col-11 col-lg-10 max-width-1 mx-auto card-hover border border-low-body">
+          <div class="col-12 my-auto text-lg-start">
+            <h1 class="fs-1 fw-bold text-center text-body mb-5 mt-5">Conhecimentos<span class="text-gradient">.</span></h1>
           </div>
 
           <div class="col-12 col-lg-6">
@@ -242,9 +239,9 @@
         </div>
       </div>
 
-
+<div class="b-divider"></div>
       <div
-        class="row-fluid carousel bg-background py-3 my-1 border-body border-dashed border-start-0 border-end-0 border-1">
+        class="row-fluid carousel py-3 my-1 border-start-0 border-end-0 border-1 border-low-body">
         <div class="wrapper">
           <img src="Icons/php.svg" alt="PHP Logo" width="45" height="45" />
           <img src="Icons/html-5.svg" alt="HTML-5 Logo" width="45" height="45" />
@@ -272,13 +269,11 @@
           <img src="Icons/laravel.svg" alt="Laravel Logo" width="45" height="45" />
         </div>
       </div>
-
+      <div class="b-divider"></div>
+      
       <div class="row-fluid my-5 mx-auto" id="quemSou">
-        <div class="bg-background p-5 text-center text-body-secondary col-11 col-lg-10 mx-auto card-hover max-width-1">
-          <div class="mb-3 text-body fs-1">
-            <i class="bi bi-person-raised-hand display-3"></i>
-          </div>
-          <h1 class="text-body fs-2">Quem Sou?</h1>
+        <div class="bg-background p-5 text-center text-body-secondary col-11 col-lg-10 mx-auto card-hover max-width-1 border border-low-body">
+          <h1 class="text-body fs-1 fw-bold mt-2">Quem Sou<span class="text-gradient">?</span></h1>
           <h5 class="col-lg-9 mx-auto mt-2 info fs-5">
             Sou um <span>Desenvolvedor Web Junior</span> de
             <span>18 anos</span> com formação recente no curso do
@@ -294,21 +289,28 @@
         </div>
       </div>
 
-      <div class="b-divider mb-5"></div>
+      <!-- <div class="b-divider mb-5"></div> -->
 
-      <div class="row mb-5 mx-auto" id="projetos">
+      <div class="row-fluid col-12 pt-3">
+        <div class="col-12 p-0 border-body">
+          <hr class="hr opacity-100 col-10 border-5" />
+          <hr class="hr opacity-100 col-8 border-5" />
+          <hr class="hr opacity-100 col-6 border-5" />
+          <hr class="hr opacity-100 col-4 border-5" />
+          <hr class="hr opacity-100 col-2 border-5" />
+        </div>
+      </div>
+
+      <div class="row my-5 mx-auto" id="projetos">
         <div class="col-12 mx-auto text-center mb-5">
-          <div class="mb-3 text-body fs-1">
-            <i class="bi bi-braces display-3"></i>
-          </div>
-          <h1 class="text-body fs-2">Projetos</h1>
+          <h1 class="text-body fs-1 fw-bold">Projetos<span class="text-gradient">.</span></h1>
         </div>
 
         <div class="row-fluid">
           <div class="col-12 d-flex flex-wrap mx-auto justify-content-center align-items-center max-width-2">
             <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center ms-2">
               <div class="m-4 info text-center text-xl-start">
-                <h2 class="fw-bold fs-1">FacilitaAí</h2>
+                <h2 class="fw-bold fs-1"><span class="text-gradient">FacilitaAí</span></h2>
                 <p>O site proporciona uma plataforma simplificada para a <span>conexão entre profissionais e
                     clientes</span> em busca de <span>serviços específicos</span>, onde os <span>profissionais</span>
                   podem <span>criar perfis personalizados</span> para exibir suas
@@ -399,16 +401,16 @@
       </div>
 
 
-      <div class="b-divider"></div>
+      <!-- <div class="b-divider"></div> -->
 
       <div class="row-fluid" id="contatos">
-        <div class="col-11 bg-background mx-auto py-5 mt-5 rounded-top-5 max-width-2 border">
+        <div class="col-11 bg-background mx-auto py-5 mt-5 rounded-top-5 max-width-2 border border-low-body shadow-lg border-bottom-0">
 
-          <h3 class="col-12 text-center mx-auto my-5">Contatos</h3>
+          <h3 class="col-12 text-center mx-auto my-5 fs-1 fw-bold">Contatos<span class="text-gradient">.</span></h3>
 
           <div class="col-10 d-flex justify-content-center align-items-center flex-wrap gap-2 mx-auto my-5">
             <div
-              class="col-12 col-lg-7 text-break bg-body border border-1 scale2 border-body text-center rounded-3 p-3 d-flex gap-3">
+              class="col-12 col-lg-7 text-break bg-body border border-1 scale2 border-low-body text-center rounded-3 p-3 d-flex gap-3">
 
               <img src="Icons/email.svg" alt="" width="35px">
               <h4 class="fs-5 my-auto">leonardoarthu627@gmail.com</h4>
@@ -428,7 +430,7 @@
 
             </div>
             <div
-              class="col-12 col-lg-4 text-break bg-body border border-1 scale2 border-body text-center rounded-3 p-3 d-flex gap-2">
+              class="col-12 col-lg-4 text-break bg-body border border-1 scale2 border-low-body text-center rounded-3 p-3 d-flex gap-2">
 
               <img src="Icons/github.svg" alt="" width="35px">
               <h4 class="fs-5 my-auto">LeonardoArtLS</h4>
@@ -448,7 +450,7 @@
 
             </div>
             <div
-              class="col-12 col-lg-4 text-break bg-body border border-1 scale2 border-body text-center rounded-3 p-3 d-flex gap-2">
+              class="col-12 col-lg-4 text-break bg-body border border-1 scale2 border-low-body text-center rounded-3 p-3 d-flex gap-2">
 
               <img src="Icons/whatsapp.svg" alt="" width="35px">
               <h4 class="fs-5 my-auto">+55 (47) 99787-3199</h4>
@@ -468,7 +470,7 @@
 
             </div>
             <div
-              class="col-12 col-lg-7 text-break bg-body border border-1 scale2 border-body text-center rounded-3 p-3 d-flex gap-2">
+              class="col-12 col-lg-7 text-break bg-body border border-1 scale2 border-low-body text-center rounded-3 p-3 d-flex gap-2">
 
               <img src="Icons/linkedin.svg" alt="" width="35px">
               <h4 class="fs-5 my-auto">Leonardo Arthur Luchtenberg Silva</h4>
@@ -489,7 +491,7 @@
             </div>
           </div>
 
-          <h5 class="col-12 text-center">Um clique nos separa - Vamos conversar!</h5>
+          <h5 class="col-12 text-center pb-5 p-lg-0">Um clique nos separa - <span class="fw-bold text-gradient">Vamos conversar!</span></h5>
 
         </div>
       </div>

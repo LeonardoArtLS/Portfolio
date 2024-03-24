@@ -14,6 +14,10 @@ html {
   scrollbar-width: thin;
 }
 
+.bg-body {
+  background: var(--bs-body-bg) !important;
+}
+
 @media (max-width: 576px) {
   .remove-padding-sm {
     padding: 0;
@@ -41,8 +45,8 @@ html {
   border-color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.border-dashed {
-  border-style: dashed;
+.border-low-body {
+  border-color: rgba(var(--bs-body-color-rgb), 0.4) !important;
 }
 
 .profile-photo {
@@ -141,8 +145,7 @@ html {
   border-radius: 17px;
   transition: all 0.5s;
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity));
-  border: 1.3px dashed rgba(var(--bs-body-color-rgb), 0.8);
-  background: linear-gradient(145deg, --bs-body-bg, --bs-body-secondary);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -154,8 +157,7 @@ html {
   word-break: break-word;
 }
 .card-hover:hover {
-  transform: scale(1.015);
-  border-color: rgba(var(--bs-body-color-rgb), 1);
+  scale: 1.01;
 }
 
 .scale:hover {
@@ -211,6 +213,10 @@ html {
   cursor: pointer;
 }
 
+.navegation_button:hover {
+  background: rgba(var(--bs-body-color-rgb), 0.06);
+}
+
 .navegation_button:has(.active) {
   background-color: var(--bs-primary);
   transition: all 0.3s ease;
@@ -222,17 +228,47 @@ html {
   color: var(--bs-light);
 }
 
-.navegation_button:has(a i.bi-house-fill) {
+.navegation_button:has(a i.bi-house-fill):not(:has(.active)) {
   background-color: var(--bs-body-color);
   padding: 15px;
 }
+.navegation_button:has(a i.bi-house-fill):not(:has(.active)) .bi-house-fill {
+  color: var(--bs-body-bg);
+}
 
 .navegation_button a i.bi-house-fill {
-  color: var(--bs-body-bg);
+  color: #f9f9f9;
   width: 15px;
 }
 
 .LinkIcon {
   fill: var(--bs-body-color);
   stroke: var(--bs-body-color);
+}
+
+.button-theme:hover {
+  --spread: 20px;
+  box-shadow: -10px -10px var(--spread) 0px #5B51D8, 0 -10px var(--spread) 0px #833AB4, 10px -10px var(--spread) 0px #E1306C, 10px 0 var(--spread) 0px #FD1D1D, 10px 10px var(--spread) 0px #F77737, 0 10px var(--spread) 0px #FCAF45, -10px 10px var(--spread) 0px #FFDC80;
+  background: var(--bs-body-color);
+}
+
+.theme:hover:not(.active) {
+  background-color: rgba(var(--bs-body-bg-rgb), 0.8);
+  color: var(--bs-body-color);
+}
+
+::-moz-selection {
+  background-color: var(--gradient-1);
+  color: black;
+}
+
+::selection {
+  background-color: var(--gradient-1);
+  color: black;
+}
+
+/* Para navegadores antigos */
+::-moz-selection {
+  background-color: var(--gradient-1);
+  color: black;
 }/*# sourceMappingURL=style.css.map */
