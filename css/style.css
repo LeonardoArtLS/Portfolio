@@ -271,4 +271,9 @@ body {
 ::-moz-selection {
   background-color: var(--gradient-1);
   color: black;
+}
+
+.img-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
