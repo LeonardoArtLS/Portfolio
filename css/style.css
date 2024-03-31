@@ -95,14 +95,14 @@ body {
     font-size: clamp(3rem, 1.5rem + 7.5vi, 4.6875rem);
   }
 }
-.custom-col p {
+.custom-col h3 {
   font-size: 18px;
   font-weight: 500;
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
 }
 @media (max-width: 900px) {
-  .custom-col p {
+  .custom-col h3 {
     margin-bottom: 5rem;
   }
 }
