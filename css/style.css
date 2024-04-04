@@ -11,6 +11,17 @@ body {
   scrollbar-width: thin;
 }
 
+ul.nav li, ul.nav li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.nav li a {
+  padding: 15px 19px;
+  margin: 10px;
+}
+
 .bg-body {
   background: var(--bs-body-bg) !important;
 }
@@ -199,8 +210,8 @@ body {
 }
 
 .navegation_button {
-  width: 32px;
-  height: 32px;
+  width: 33px;
+  height: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,21 +232,21 @@ body {
   padding-inline: 25px;
 }
 
-.navegation_button:has(.active) a i {
+.navegation_button:has(.active) a svg {
   color: var(--bs-light);
 }
 
-.navegation_button:has(a i.bi-house-fill):not(:has(.active)) {
+.navegation_button:has(a svg.home):not(:has(.active)) {
   background-color: var(--bs-body-color);
   padding: 15px;
 }
-.navegation_button:has(a i.bi-house-fill):not(:has(.active)) .bi-house-fill {
+.navegation_button:has(a svg.home):not(:has(.active)) .home {
   color: var(--bs-body-bg);
 }
 
-.navegation_button a i.bi-house-fill {
+.navegation_button a svg.home {
   color: #f9f9f9;
-  width: 15px;
+  width: 19px;
 }
 
 .LinkIcon {
