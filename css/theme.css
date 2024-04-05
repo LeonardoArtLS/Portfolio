@@ -13230,7 +13230,7 @@ textarea.form-control-lg {
   --background-gradient: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
 }
 [data-bs-theme=light] .bg-background {
-  background-color: var(--background-color);
+  background-color: var(--background-color) !important;
 }
 [data-bs-theme=light] .dropdown-item.active {
   background: var(--background-gradient);
@@ -13254,7 +13254,7 @@ textarea.form-control-lg {
   --bs-body-bg: #212121;
 }
 [data-bs-theme=dark] .bg-background {
-  background-color: var(--background-color);
+  background-color: var(--background-color) !important;
 }
 [data-bs-theme=dark] .dropdown-item.active {
   background: var(--background-gradient);
@@ -13277,7 +13277,7 @@ textarea.form-control-lg {
   --background-gradient: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
 }
 [data-bs-theme=coffee] .bg-background {
-  background-color: var(--bs-background-color);
+  background-color: var(--bs-background-color) !important;
 }
 [data-bs-theme=coffee] .dropdown-item.active {
   background: var(--background-gradient);
@@ -13300,7 +13300,7 @@ textarea.form-control-lg {
   --background-gradient: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
 }
 [data-bs-theme=paper] .bg-background {
-  background-color: var(--bs-background-color);
+  background-color: var(--bs-background-color) !important;
 }
 [data-bs-theme=paper] .dropdown-item.active {
   background: var(--background-gradient);

@@ -1,9 +1,9 @@
-@import "../vendor/twbs/bootstrap/scss/functions";
-@import "../vendor/twbs/bootstrap/scss/variables";
-@import "../vendor/twbs/bootstrap/scss/variables-dark";
-@import "../vendor/twbs/bootstrap/scss/maps";
-@import "../vendor/twbs/bootstrap/scss/mixins";
-@import "../vendor/twbs/bootstrap/scss/root";
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/variables-dark";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
 
 $main: #000;
 $sub: #000;
@@ -19,7 +19,7 @@ $custom-colors: (
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-@import "../vendor/twbs/bootstrap/scss/utilities";
+@import "../bootstrap/scss/utilities";
 
 $all-colors: map-merge-multiple(("main": $main,
       "sub": $sub,
@@ -37,9 +37,9 @@ $utilities: map-merge($utilities,
     ));
 
 
-@import "../vendor/twbs/bootstrap/scss/reboot";
+@import "../bootstrap/scss/reboot";
 
-@import "../vendor/twbs/bootstrap/scss/bootstrap";
+@import "../bootstrap/scss/bootstrap";
 
 @mixin text-gradient($color-1, $color-2) {
 
@@ -56,7 +56,7 @@ $utilities: map-merge($utilities,
   --background-color: #fcfcfc;
 
   .bg-background {
-    background-color: var(--background-color);
+    background-color: var(--background-color) !important;
   }
 
   --gradient-1: #FA9239;
@@ -78,7 +78,7 @@ $utilities: map-merge($utilities,
   --background-color: #171717;
 
   .bg-background {
-    background-color: var(--background-color);
+    background-color: var(--background-color) !important;
   }
 
   --gradient-1: #5433FF;
@@ -103,7 +103,7 @@ $utilities: map-merge($utilities,
   --bs-background-color: #fff8f3;
 
   .bg-background {
-    background-color: var(--bs-background-color);
+    background-color: var(--bs-background-color) !important;
   }
 
   --gradient-1: #41302b;
@@ -129,7 +129,7 @@ $utilities: map-merge($utilities,
   --bs-background-color: rgb(251, 248, 255);
 
   .bg-background {
-    background-color: var(--bs-background-color);
+    background-color: var(--bs-background-color) !important;
   }
 
   --gradient-1: #7F00FF;

@@ -103,14 +103,14 @@ ul.nav li a {
     font-size: clamp(3rem, 1.5rem + 7.5vi, 4.6875rem);
   }
 }
-.custom-col h3 {
+.custom-col p {
   font-size: 18px;
   font-weight: 500;
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
 }
 @media (max-width: 900px) {
-  .custom-col h3 {
+  .custom-col p {
     margin-bottom: 5rem;
   }
 }
